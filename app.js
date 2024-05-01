@@ -3,8 +3,11 @@
 const express = require("express");
 const app = express();
 const nodemailer = require('nodemailer');
-const { Readable } = require('stream');
 const cors = require('cors');
+const dotenv = require("dotenv")
+dotenv.config()
+
+const PORT = process.env.PORT
 
 
 const bodyParser = require('body-parser');
@@ -51,7 +54,7 @@ const emailConfig = {
   service: "gmail", // 이메일 서비스 (Gmail 사용)
   auth: {
     user: "systemresetsend@gmail.com", // 발신자 이메일 주소
-    pass: "kmfvrtomwfqwtocn", // 발신자 이메일 계정의 암호 (앱 비밀번호를 사용해야 할 수도 있음)
+    pass: process.env.NODEAPP_PS, // 발신자 이메일 계정의 암호 (앱 비밀번호를 사용해야 할 수도 있음)
   },
 };
 
@@ -109,6 +112,6 @@ app.post('/submit-apply', (req, res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("server start!")
 });
