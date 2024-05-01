@@ -484,8 +484,11 @@
         let btn = document.getElementById('btn');
         
         
+        
+        
     
         btn.addEventListener('click', function() {
+            event.preventDefault();
             if (nameInput.value == "") {
                 nameInput.nextElementSibling.classList.add('warning');
                 setTimeout(function() {
