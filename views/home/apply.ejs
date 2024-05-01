@@ -67,7 +67,7 @@
         <div class="mil-menu-frame">
             <!-- frame clone -->
             <div class="mil-frame-top">
-                <a href="home-1.ejs" class="mil-logo">SR_7135</a>
+                <a href="/" class="mil-logo">SR_7135</a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -192,7 +192,7 @@
         <!-- frame -->
         <div class="mil-frame">
             <div class="mil-frame-top">
-                <a href="home-1.ejs" class="mil-logo">SR_7135</a>
+                <a href="/" class="mil-logo">SR_7135</a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -482,13 +482,12 @@
         let emailInput = document.getElementById('emailInput');
         let messageInput = document.getElementById('messageInput');
         let btn = document.getElementById('btn');
-        
-        
-        
+
         
     
         btn.addEventListener('click', function() {
-            event.preventDefault();
+            
+            
             if (nameInput.value == "") {
                 nameInput.nextElementSibling.classList.add('warning');
                 setTimeout(function() {
