@@ -113,5 +113,5 @@ app.post('/submit-apply', (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log("server start!")
+  console.log(`Server is running on port ${PORT}`);
 });
